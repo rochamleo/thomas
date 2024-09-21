@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Vendas</title>
+    <link rel="stylesheet" href="cadastroVisitas.css">
+</head>
+
+<body>
+    <div class="box">   
+        <h1><b>Registro de Visitas</b></h1>
+
+        <form>
+            <div>
+                Data da Venda
+                <input type="date" class="input" id="data" required>
+            </div>
+            <br>
+
+            <div>
+                Vendedor
+                <input type="text" placeholder="Nome Vendedor" class="input" id="vendedor" required>
+            </div>
+            <br>
+
+            <div>
+                Cliente
+                <input type="text" placeholder="Nome Cliente" class="input" id="cliente" required>
+            </div>
+            <br>
+            
+            <div>
+                Observações 
+                <textarea cols="25" rows="10" placeholder="Observações" class="input" id="obs" required></textarea>
+            </div>
+            <br>
+
+            <div>
+                Linha
+                <input type="text" placeholder="Linha/Produto" class="input" id="cliente" required>
+            </div>
+            <br>
+
+            <div>
+                Qtd (volume)
+                <input type="number" placeholder="Qtd Vendida" class="input" id="cliente" required>
+            </div>
+            <br>
+
+            <div>
+                Total da Venda
+                <input type="number" placeholder="Total Vendido" class="input" id="cliente" required>
+            </div>
+            <br>
+
+            Tipo da Venda
+            <div class="boxSelects">
+                <div>
+                    <input type="radio" id="v" value="v" name="tipoVenda">
+                    <label for="v">Visita</label>
+                </div>
+                <div>
+                    <input type="radio" id="w" value="w" name="tipoVenda">
+                    <label for="w">WhatsApp</label>
+                </div>
+            </div>
+            <br>
+
+            Próxima Visita em
+            <div class="boxSelects">
+                <div>
+                    <input type="radio" id="30" value="30" name="proxVisita">
+                    <label for="30">30 dias</label>
+                </div>
+                <div>
+                    <input type="radio" id="60" value="60" name="proxVisita">
+                    <label for="60">60 dias</label>
+                </div>
+                <div>
+                    <input type="radio" id="90" value="90" name="proxVisita">
+                    <label for="90">90 dias</label>
+                </div>
+                <div>
+                    <input type="radio" id="120" value="120" name="proxVisita">
+                    <label for="120">120 dias</label>
+                </div>
+            </div>
+            <br>
+
+            <button class="botao" type="submit">Registrar Visita</button>
+
+        </form>
+    </div>
+</body>
+</html>

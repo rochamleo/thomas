@@ -1,0 +1,93 @@
+:root {
+    --color-white: #fff;
+    --color-gelo: #f7f7f7;
+    --color-red: #7D2E00;
+    --color-principal: #1C2140;
+    --color-secundaria: #023373;
+    --color-fundoBox: #031b3a;
+    --color-azul: #0455BF;
+    --color-verde: #04D9C4;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--color-gelo);
+    background-color: var(--color-principal); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+}
+
+.box form{
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    background-color: var(--color-fundoBox);
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 30%;
+    overflow: auto;
+    border-color: var(--color-gelo);
+    border-style: groove;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.input {
+    padding: 8px 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: var(--color-gelo);
+    border: 3px solid var(--color-secundaria);
+    width: 100%;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.input:focus {
+    border-color: var(--color-gelo)
+}
+
+.boxSelects {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+    gap: 1rem;
+}
+
+button[type="submit"]{
+    padding: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    background-color: var(--color-azul);
+    color: var(--color-gelo);
+    cursor: pointer;
+    transition: .3s;
+}
+
+button[type="submit"]:hover{
+    background-color: var(--color-gelo);
+    color: var(--color-secundaria);
+}
+
+@media screen and (max-whidt: 576px) {
+    .boxSelects{
+        flex-direction: column;
+        gap: 5px;
+    }
+}

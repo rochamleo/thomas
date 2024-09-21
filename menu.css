@@ -1,0 +1,119 @@
+:root {
+    --color-white: #fff;
+    --color-gelo: #f7f7f7;
+    --color-red: #7D2E00;
+    --color-principal: #1C2140; /* Azul Escuro */
+    --color-secundaria: #023373; /* Azul Médio */
+    --color-fundoBox: #031b3a; /* Azul Escuríssimo */
+    --color-azul: #0455BF; /* Azul */
+    --color-verde: #04D9C4; /* Verde Claro */
+}
+
+/* Estilos gerais da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--color-principal);
+}
+
+p {
+    color: var(--color-principal);
+}
+
+/* Estilos para o menu lateral */
+.sidebar {
+    height: 100%;
+    width: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-principal);
+    padding-top: 20px;
+    transition: width 0.3s;
+    overflow: hidden;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color-white);
+    display: block;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sidebar:hover {
+    width: 250px;
+}
+
+.sidebar:hover a {
+    opacity: 1;
+}
+
+.sidebar a:hover {
+    background-color: var(--color-secundaria);
+}
+
+/* Estilos para o conteúdo */
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+.sidebar:hover ~ .content {
+    margin-left: 250px;
+}
+
+/* Estilos para o container de cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilos individuais dos cards */
+.card {
+    background-color: var(--color-gelo);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    margin: 0;
+}
+
+.card-visitas-programadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.visitas-detalhes p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Estilo adicional para destaque da linha de 30 dias */
+.visitas-detalhes p:nth-child(1) {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-verde); /* Destaque para os 30 dias */
+}
